@@ -3,7 +3,8 @@ def encodeString(stringVal):
   prevChar = stringVal[0]
   count = 0
   for char in stringVal:
-    if prevChar = char: encodedList.append((prevChar, count))
+    if prevChar != char: 
+      encodedList.append((prevChar, count))
       count=0
   prevChar = char
   count = count + 1
@@ -15,4 +16,7 @@ def decodeString(encodedList):
   decodedStr = ''
   for item in encodedList:
     decodedStr = decodedStr + item[0] * item[1]
-    return decodedStr
+  return decodedStr
+
+#test encode string
+encodeString('AAAABBBCCC')
